@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICTE - Instituto Científico y Tecnológico del Ejército</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin:0; }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar {
+      padding: 0.5rem 1rem;
+    }
+    .navbar-brand img {
+      height: 70px; /* Logo más grande */
+    }
+    .navbar-nav .nav-link {
+      color: #1e3d2c !important;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #d4af37 !important;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: url('img/hero.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: white;
+      padding: 140px 20px;
+      text-align: center;
+      margin-top: 70px;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero .container {
+      position: relative;
+    }
+    .hero h1 { font-size: 3rem; font-weight: bold; }
+    .btn-main {
+      background-color: #1e3d2c;
+      color: white;
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn-main:hover { background-color: #274e38; }
+
+    /* ===== BARRA LATERAL REDES ===== */
+    .social-bar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+    .social-bar a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: #1e3d2c;
+      color: white;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .social-bar a:hover {
+      background-color: #d4af37;
+    }
+
+    /* ===== SECCIONES ===== */
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #1e3d2c;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav class="navbar navbar-expand-mb navbar-light bg-white">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="img/logo_icte.png" alt="Logo ICTE">
+      </a>
+
+      <!-- Botón hamburguesa a la derecha -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== MENÚ LATERAL OFFCANVAS ===== -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="menuOffcanvasLabel"></h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="nosotros.html" target="_blank">Nosotros</a></li>
+      <li class="nav-item"><a class="nav-link" href="#programas">Programas Académicos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#grados">Grados y Títulos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#investigacion">Investigación</a></li>
+      <li class="nav-item"><a class="nav-link" href="#notas">Notas de Prensa</a></li>
+      <li class="nav-item"><a class="nav-link" href="#docentes">Docentes</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== BARRA LATERAL REDES ===== -->
+<div class="social-bar">
+  <a href="https://wa.me/51999999999" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <h1>Ciencia y tecnología al servicio de la defensa y el desarrollo del Perú</h1>
+    <p>Inscripciones abiertas — Admisión ICTE 2025</p>
+    <a href="#admision" class="btn-main">Postula Ahora</a>
+  </div>
+</section>
+
+<!-- ===== NOSOTROS ===== -->
+<section id="nosotros" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Nosotros</h2>
+    <p style="max-width:900px; margin:0 auto; font-size:1.1rem; line-height:1.8; color:#333;">
+      El Instituto Científico y Tecnológico del Ejército (ICTE) es una institución educativa dedicada a la formación,
+      especialización y perfeccionamiento de profesionales en ciencia y tecnología, con el compromiso de servir
+      a la defensa y desarrollo nacional.
+    </p>
+  </div>
+</section>
+<!-- ===== ADMISION ===== -->
+<section id="admision" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Proceso de Admisión y Matrícula</h2>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h4>Paso 1: Requisitos</h4>
+        <p>Adjuntar DNI, copia del grado, foto 2x2...</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h4>Paso 2: Registro</h4>
+        <p>Completar el formulario online en el apartado 'Registro de Admisión' y enviar escaneados.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h4>Paso 3: Evaluación y Resultados</h4>
+        <p>Asistir al examen el día X, los resultados serán publicados el día Y.</p>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" class="btn-main">Descargar Prospecto</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISIÓN ===== -->
+<section class="mision" style="padding: 40px; background-color: #f5f5f5; text-align: center;">
+  <h2 style="font-size: 2rem; color: #1e3d2c; margin-bottom: 20px;">Nuestra Misión</h2>
+  <p style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: #333;">
+    Formar, especializar y perfeccionar en ciencia y tecnología al personal militar de las Fuerzas Armadas y al público en general, 
+    promoviendo la investigación, la innovación y la responsabilidad social, 
+    para brindar soluciones que contribuyan a la defensa y desarrollo nacional del Perú, 
+    bajo los valores esenciales de compromiso, excelencia y servicio a la Patria.
+  </p>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section id="contacto" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+    <p><strong>Dirección:</strong> Av. Ejemplo 123, Lima - Perú</p>
+    <p><strong>Teléfono:</strong> (01) 123-4567</p>
+    <p><strong>Email:</strong> admision@icte.mil.pe</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="text-center py-3" style="background-color:#1e3d2c; color:white;">
+  © 2025 ICTE - Todos los derechos reservados
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
